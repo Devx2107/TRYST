@@ -1,3 +1,4 @@
 # TRYST
 
-Dependency: flag
+Dependency: word-digest
+Model: flag
