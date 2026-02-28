@@ -1,3 +1,3 @@
 # TRYST
 
-Dependency: /flag
+Dependency: word-digest flag
