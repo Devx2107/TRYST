@@ -1,4 +1,5 @@
 # TRYST
+ACTION: pull model
 
 ## Requirements
 fastapi==0.95.1
