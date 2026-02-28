@@ -1,4 +1,5 @@
 # TRYST
 
-Dependency: word-digest 
-flag
+Dependency: word-digest
+
+word digest validation required
