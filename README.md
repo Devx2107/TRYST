@@ -1,3 +1,4 @@
 # TRYST
 
-Dependency: word-digest flag
+Dependency: word-digest 
+flag
